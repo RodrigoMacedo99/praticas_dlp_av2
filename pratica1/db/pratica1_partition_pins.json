@@ -4,19 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "S[2]",
+					"name" : "Suni[0]",
 					"strict" : false
 				},
 				{
-					"name" : "S[1]",
+					"name" : "Suni[1]",
 					"strict" : false
 				},
 				{
-					"name" : "S[0]",
+					"name" : "Suni[2]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "Suni[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Suni[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Suni[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Suni[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk1",
 					"strict" : false
 				}
 			]

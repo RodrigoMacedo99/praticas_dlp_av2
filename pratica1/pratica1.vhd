@@ -3,44 +3,59 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY pratica1 IS
 	PORT(
-		clk: IN STD_LOGIC;
-		S: OUT STD_LOGIC_VECTOR(0 TO 2)
+		clk1: IN STD_LOGIC;
+		Suni: OUT STD_LOGIC_VECTOR (6 downto 0)
 	);
 
 END pratica1;
 
 ARCHITECTURE behave OF pratica1 IS
-	TYPE STATE_TYPE IS (S0, S1, S2, S3, S4, S5);
 	
-	SIGNAL y: STATE_TYPE;
+	component counter is
+    Port ( clk: in STD_LOGIC;
+           S: out STD_LOGIC_VECTOR (2 downto 0)
+			  );
+	end component;
+	
+	component div_clock is
+    generic ( 
+        N : integer := 19
+    );
+    port (
+        mclk : in std_logic;
+        clk190 : out std_logic
+    );
+	end component ;
+	
+	component encoder is
+    Port ( hex : in STD_LOGIC_VECTOR (2 downto 0);
+           a_to_g : out STD_LOGIC_VECTOR (6 downto 0)
+           );
+	end component;
+	
+	constant N : integer := 3;
+	
+	signal clk190 : std_logic;
+
+   signal digit : STD_LOGIC_VECTOR (2 downto 0);
+	
 	BEGIN 
-		state_machine: PROCESS (clk)
-		VARIABLE Z: STD_LOGIC_VECTOR(0 TO 3);
-		BEGIN
-			IF (clk'EVENT AND clk = '1') THEN
-				
-				CASE y IS
-					WHEN S0 => -- next state and output
-						y <= S1;
-						S <= "010";
-					WHEN S1 =>
-						y <= S2;
-						S <= "011";
-					WHEN S2 =>
-						y <= S3;
-						S <= "100";
-					WHEN S3 =>
-						y <= S4;
-						S <= "101";
-					WHEN S4 =>
-						y <= S5;
-						S <= "110";
-					WHEN S5 =>
-						y <= S0;
-						S <= "001";
-				END CASE;
-			
-			END IF;
-		END PROCESS state_machine;
+		utt: div_clock
+			 generic map (
+				  N => N
+			 )
+			 port map (
+				  mclk => clk1,
+				  clk190 => clk190
+			 );
+
+		count: counter 
+			 port map ( clk => clk190,
+					  S => digit
+					  );
+		display: encoder
+			 port map ( hex => digit,
+					  a_to_g => Suni
+					  );
 
 END behave;

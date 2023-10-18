@@ -1,5 +1,5 @@
 
-State Machine - |pratica1|y
+State Machine - |pratica1|counter:count|y
 Name y.S5 y.S4 y.S3 y.S2 y.S1 y.S0 
 y.S0 0 0 0 0 0 0 
 y.S1 0 0 0 0 1 1 

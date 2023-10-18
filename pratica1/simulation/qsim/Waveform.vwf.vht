@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/17/2023 11:50:35"
+-- Generated on "10/17/2023 21:29:25"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pratica1
 -- 
@@ -34,33 +34,31 @@ END pratica1_vhd_vec_tst;
 ARCHITECTURE pratica1_arch OF pratica1_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk : STD_LOGIC;
-SIGNAL S : STD_LOGIC_VECTOR(0 TO 2);
+SIGNAL clk1 : STD_LOGIC;
+SIGNAL Suni : STD_LOGIC_VECTOR(6 DOWNTO 0);
 COMPONENT pratica1
 	PORT (
-	clk : IN STD_LOGIC;
-	S : OUT STD_LOGIC_VECTOR(0 TO 2)
+	clk1 : IN STD_LOGIC;
+	Suni : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : pratica1
 	PORT MAP (
 -- list connections between master ports and signals
-	clk => clk,
-	S => S
+	clk1 => clk1,
+	Suni => Suni
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- clk1
+t_prcs_clk1: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
-	LOOP
-		clk <= '0';
-		WAIT FOR 80000 ps;
-		clk <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
-	clk <= '0';
-WAIT;
-END PROCESS t_prcs_clk;
+LOOP
+	clk1 <= '0';
+	WAIT FOR 12500 ps;
+	clk1 <= '1';
+	WAIT FOR 12500 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_clk1;
 END pratica1_arch;

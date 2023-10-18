@@ -3,7 +3,7 @@ $comment
 		vcd file pratica1.msim.vcd -direction
 $end
 $date
-	Tue Oct 17 11:50:38 2023
+	Tue Oct 17 21:29:30 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -13,75 +13,100 @@ $timescale
 $end
 
 $scope module pratica1_vhd_vec_tst $end
-$var wire 1 ! clk $end
-$var wire 1 " S [0] $end
-$var wire 1 # S [1] $end
-$var wire 1 $ S [2] $end
+$var wire 1 ! clk1 $end
+$var wire 1 " Suni [6] $end
+$var wire 1 # Suni [5] $end
+$var wire 1 $ Suni [4] $end
+$var wire 1 % Suni [3] $end
+$var wire 1 & Suni [2] $end
+$var wire 1 ' Suni [1] $end
+$var wire 1 ( Suni [0] $end
 
 $scope module i1 $end
-$var wire 1 % gnd $end
-$var wire 1 & vcc $end
-$var wire 1 ' unknown $end
-$var wire 1 ( devoe $end
-$var wire 1 ) devclrn $end
-$var wire 1 * devpor $end
-$var wire 1 + ww_devoe $end
-$var wire 1 , ww_devclrn $end
-$var wire 1 - ww_devpor $end
-$var wire 1 . ww_clk $end
-$var wire 1 / ww_S [0] $end
-$var wire 1 0 ww_S [1] $end
-$var wire 1 1 ww_S [2] $end
-$var wire 1 2 \S[2]~output_o\ $end
-$var wire 1 3 \S[1]~output_o\ $end
-$var wire 1 4 \S[0]~output_o\ $end
-$var wire 1 5 \clk~input_o\ $end
-$var wire 1 6 \y.S1~0_combout\ $end
-$var wire 1 7 \y.S1~q\ $end
-$var wire 1 8 \y.S2~q\ $end
-$var wire 1 9 \y.S3~q\ $end
-$var wire 1 : \y.S4~q\ $end
-$var wire 1 ; \y.S5~q\ $end
-$var wire 1 < \y.S0~0_combout\ $end
-$var wire 1 = \y.S0~q\ $end
-$var wire 1 > \WideOr2~combout\ $end
-$var wire 1 ? \S[2]~reg0_q\ $end
-$var wire 1 @ \WideOr1~combout\ $end
-$var wire 1 A \S[1]~reg0_q\ $end
-$var wire 1 B \WideOr0~combout\ $end
-$var wire 1 C \S[0]~reg0_q\ $end
-$var wire 1 D \ALT_INV_y.S5~q\ $end
-$var wire 1 E \ALT_INV_y.S1~q\ $end
-$var wire 1 F \ALT_INV_y.S4~q\ $end
-$var wire 1 G \ALT_INV_y.S2~q\ $end
-$var wire 1 H \ALT_INV_y.S0~q\ $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var wire 1 , devoe $end
+$var wire 1 - devclrn $end
+$var wire 1 . devpor $end
+$var wire 1 / ww_devoe $end
+$var wire 1 0 ww_devclrn $end
+$var wire 1 1 ww_devpor $end
+$var wire 1 2 ww_clk1 $end
+$var wire 1 3 ww_Suni [6] $end
+$var wire 1 4 ww_Suni [5] $end
+$var wire 1 5 ww_Suni [4] $end
+$var wire 1 6 ww_Suni [3] $end
+$var wire 1 7 ww_Suni [2] $end
+$var wire 1 8 ww_Suni [1] $end
+$var wire 1 9 ww_Suni [0] $end
+$var wire 1 : \Suni[0]~output_o\ $end
+$var wire 1 ; \Suni[1]~output_o\ $end
+$var wire 1 < \Suni[2]~output_o\ $end
+$var wire 1 = \Suni[3]~output_o\ $end
+$var wire 1 > \Suni[4]~output_o\ $end
+$var wire 1 ? \Suni[5]~output_o\ $end
+$var wire 1 @ \Suni[6]~output_o\ $end
+$var wire 1 A \clk1~input_o\ $end
+$var wire 1 B \utt|count:cont[1]~0_combout\ $end
+$var wire 1 C \utt|count:cont[1]~q\ $end
+$var wire 1 D \utt|cont~1_combout\ $end
+$var wire 1 E \utt|count:cont[2]~q\ $end
+$var wire 1 F \utt|cont~0_combout\ $end
+$var wire 1 G \utt|count:cont[0]~q\ $end
+$var wire 1 H \utt|Equal0~0_combout\ $end
+$var wire 1 I \utt|clk190~q\ $end
+$var wire 1 J \count|y.S5~q\ $end
+$var wire 1 K \count|y.S0~0_combout\ $end
+$var wire 1 L \count|y.S0~q\ $end
+$var wire 1 M \count|y.S1~0_combout\ $end
+$var wire 1 N \count|y.S1~q\ $end
+$var wire 1 O \count|y.S2~q\ $end
+$var wire 1 P \count|y.S3~q\ $end
+$var wire 1 Q \count|y.S4~q\ $end
+$var wire 1 R \count|WideOr1~combout\ $end
+$var wire 1 S \count|WideOr0~combout\ $end
+$var wire 1 T \count|WideOr2~combout\ $end
+$var wire 1 U \display|Mux6~0_combout\ $end
+$var wire 1 V \display|Mux5~0_combout\ $end
+$var wire 1 W \display|Mux4~0_combout\ $end
+$var wire 1 X \display|Mux3~0_combout\ $end
+$var wire 1 Y \display|Mux2~0_combout\ $end
+$var wire 1 Z \display|Mux1~0_combout\ $end
+$var wire 1 [ \display|Mux0~0_combout\ $end
+$var wire 1 \ \count|S\ [2] $end
+$var wire 1 ] \count|S\ [1] $end
+$var wire 1 ^ \count|S\ [0] $end
+$var wire 1 _ \utt|ALT_INV_count:cont[2]~q\ $end
+$var wire 1 ` \utt|ALT_INV_count:cont[1]~q\ $end
+$var wire 1 a \utt|ALT_INV_count:cont[0]~q\ $end
+$var wire 1 b \count|ALT_INV_y.S2~q\ $end
+$var wire 1 c \count|ALT_INV_y.S5~q\ $end
+$var wire 1 d \count|ALT_INV_y.S1~q\ $end
+$var wire 1 e \count|ALT_INV_y.S0~q\ $end
+$var wire 1 f \count|ALT_INV_y.S4~q\ $end
+$var wire 1 g \count|ALT_INV_S\ [2] $end
+$var wire 1 h \count|ALT_INV_S\ [1] $end
+$var wire 1 i \count|ALT_INV_S\ [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
-0%
-1&
-x'
-1(
-1)
+0)
 1*
-1+
+x+
 1,
 1-
-0.
+1.
+1/
+10
+11
 02
-03
-04
-05
-16
-07
-08
-09
 0:
 0;
-1<
+0<
 0=
 0>
 0?
@@ -89,146 +114,775 @@ x'
 0A
 0B
 0C
-1D
-1E
+0D
+0E
 1F
-1G
-1H
-0/
-00
-01
-0"
+0G
+0H
+0I
+0J
+1K
+0L
+1M
+0N
+0O
+0P
+0Q
+1R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+1_
+1`
+1a
+1b
+1c
+1d
+1e
+1f
+1"
 0#
 0$
-$end
-#80000
-1!
-1.
-15
-17
-1=
-1A
-0H
-0E
-06
-1>
+0%
+0&
+0'
+0(
 13
-10
-1#
-#160000
-0!
-0.
+04
 05
-#240000
+06
+07
+08
+09
+0\
+0]
+0^
+1g
+1h
+1i
+$end
+#12500
 1!
-1.
+12
+1A
+1G
+0a
+1B
+0F
+#25000
+0!
+02
+0A
+#37500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#50000
+0!
+02
+0A
+#62500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#75000
+0!
+02
+0A
+#87500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#100000
+0!
+02
+0A
+#112500
+1!
+12
+1A
+0E
+1I
+1_
+1L
+1N
+1]
+1F
+0H
+0h
+0d
+0e
+0M
+1T
+1W
+1Z
+0[
+0@
+1?
+1<
+03
+14
+17
+1&
+1#
+0"
+#125000
+0!
+02
+0A
+#137500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#150000
+0!
+02
+0A
+#162500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#175000
+0!
+02
+0A
+#187500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#200000
+0!
+02
+0A
+#212500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#225000
+0!
+02
+0A
+#237500
+1!
+12
+1A
+0E
+1I
+1_
+0N
+1O
+1^
+1F
+0H
+0i
+0b
+1d
+0R
+1S
+0T
+0W
+1Y
+1>
+0<
 15
 07
-18
-1?
-0G
-1E
-0@
-1B
-0>
-12
-11
+0&
 1$
-#320000
+#250000
 0!
-0.
-05
-#400000
+02
+0A
+#262500
 1!
-1.
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#275000
+0!
+02
+0A
+#287500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#300000
+0!
+02
+0A
+#312500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#325000
+0!
+02
+0A
+#337500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#350000
+0!
+02
+0A
+#362500
+1!
+12
+1A
+0E
+1I
+1_
+0O
+1P
+0]
+1\
+0^
+1F
+0H
+1i
+0g
+1h
+1b
+1T
+1U
+1X
+0Z
+0?
+1=
+1:
+04
+16
+19
+1(
+1%
+0#
+#375000
+0!
+02
+0A
+#387500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#400000
+0!
+02
+0A
+#412500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#425000
+0!
+02
+0A
+#437500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#450000
+0!
+02
+0A
+#462500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#475000
+0!
+02
+0A
+#487500
+1!
+12
+1A
+0E
+1I
+1_
+0P
+1Q
+1^
+1F
+0H
+0i
+0f
+1R
+0T
+0U
+1V
+0X
+0=
+1;
+0:
+06
+18
+09
+0(
+1'
+0%
+#500000
+0!
+02
+0A
+#512500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#525000
+0!
+02
+0A
+#537500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#550000
+0!
+02
+0A
+#562500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#575000
+0!
+02
+0A
+#587500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#600000
+0!
+02
+0A
+#612500
+1!
+12
+1A
+0E
+1I
+1_
+1J
+0Q
+1]
+0^
+1F
+0H
+1i
+0h
+1f
+0c
+0K
+0S
+0R
+1T
+0Y
+0>
+05
+0$
+#625000
+0!
+02
+0A
+#637500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#650000
+0!
+02
+0A
+#662500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#675000
+0!
+02
+0A
+#687500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#700000
+0!
+02
+0A
+#712500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#725000
+0!
+02
+0A
+#737500
+1!
+12
+1A
+0E
+1I
+1_
+0J
+0L
+0]
+0\
+1^
+1F
+0H
+0i
+1g
+1h
+1e
+1c
+1K
+1M
+1R
+0T
+1U
+0V
+1X
+1Y
+1Z
+1[
+1@
+1?
+1>
+1=
+0;
+1:
+13
+14
 15
+16
 08
 19
-0?
-0A
-1C
-1G
-1>
-14
-03
-02
-1/
-00
-01
-0$
-0#
-1"
-#480000
-0!
-0.
-05
-#560000
-1!
-1.
-15
-09
-1:
-1?
-0F
-0>
-1@
-12
-11
+1(
+0'
+1%
 1$
-#640000
-0!
-0.
-05
-#720000
-1!
-1.
-15
-0:
-1;
-0?
-1A
-0D
-1F
-1>
-0@
-0<
-0B
-13
-02
-10
-01
-0$
 1#
+1"
+#750000
+0!
+02
+0A
+#762500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#775000
+0!
+02
+0A
+#787500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
 #800000
 0!
-0.
-05
-#880000
-1!
-1.
-15
-0;
-0=
-1?
+02
 0A
-0C
-1H
-1D
-1<
-16
-0>
-1@
-04
-03
+#812500
+1!
 12
-0/
-00
-11
-1$
-0#
-0"
-#960000
+1A
+1G
+0a
+0B
+1D
+0F
+#825000
 0!
-0.
+02
+0A
+#837500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#850000
+0!
+02
+0A
+#862500
+1!
+12
+1A
+0E
+1I
+1_
+1L
+1N
+1]
+0^
+1F
+0H
+1i
+0h
+0d
+0e
+0M
+1T
+0U
+1W
+0X
+0Y
+0[
+0@
+0>
+0=
+1<
+0:
+03
 05
+06
+17
+09
+0(
+1&
+0%
+0$
+0"
+#875000
+0!
+02
+0A
+#887500
+1!
+12
+1A
+1G
+0I
+0a
+1B
+0F
+#900000
+0!
+02
+0A
+#912500
+1!
+12
+1A
+1C
+0G
+1a
+0`
+1F
+#925000
+0!
+02
+0A
+#937500
+1!
+12
+1A
+1G
+0a
+0B
+1D
+0F
+#950000
+0!
+02
+0A
+#962500
+1!
+12
+1A
+0C
+1E
+0G
+1a
+0_
+1`
+0D
+1H
+#975000
+0!
+02
+0A
+#987500
+1!
+12
+1A
+0E
+1I
+1_
+0N
+1O
+1^
+1F
+0H
+0i
+0b
+1d
+0R
+1S
+0T
+0W
+1Y
+1>
+0<
+15
+07
+0&
+1$
 #1000000
