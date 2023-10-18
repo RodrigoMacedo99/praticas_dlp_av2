@@ -22,22 +22,22 @@ ARCHITECTURE behave OF counter IS
 				CASE y IS
 					WHEN S0 => -- next state and output
 						y <= S1;
-						S <= "010";
+						S <= "000";
 					WHEN S1 =>
 						y <= S2;
-						S <= "011";
+						S <= "001";
 					WHEN S2 =>
 						y <= S3;
-						S <= "100";
+						S <= "010";
 					WHEN S3 =>
 						y <= S4;
-						S <= "101";
+						S <= "011";
 					WHEN S4 =>
 						y <= S5;
-						S <= "110";
+						S <= "100";
 					WHEN S5 =>
 						y <= S0;
-						S <= "001";
+						S <= "101";
 				END CASE;
 			
 			END IF;

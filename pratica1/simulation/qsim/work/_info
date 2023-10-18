@@ -10,7 +10,7 @@ z2
 cModel Technology
 dE:/Projetos/Faculdade/pratica1/simulation/qsim
 Epratica1
-Z0 w1697588967
+Z0 w1697589495
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
@@ -20,7 +20,7 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 14
+!i122 16
 Z10 dE:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim
 Z11 8pratica1.vho
 Z12 Fpratica1.vho
@@ -30,9 +30,9 @@ VhTBYHCJSGUc5XHG]gK2V63
 !s100 O5]f^VRF[d[J_zbT`S_cI1
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1697588968
+Z14 !s110 1697589496
 !i10b 1
-Z15 !s108 1697588968.000000
+Z15 !s108 1697589496.000000
 Z16 !s90 -work|work|pratica1.vho|
 Z17 !s107 pratica1.vho|
 !i113 1
@@ -49,7 +49,7 @@ R7
 R8
 R9
 DEx4 work 8 pratica1 0 22 hTBYHCJSGUc5XHG]gK2V63
-!i122 14
+!i122 16
 l103
 L46 604
 V0_m>e5YThK_VC<UH:NS6M0
@@ -65,10 +65,10 @@ R17
 R18
 R19
 Epratica1_vhd_vec_tst
-Z20 w1697588965
+Z20 w1697589492
 R7
 R8
-!i122 15
+!i122 17
 R10
 Z21 8Waveform.vwf.vht
 Z22 FWaveform.vwf.vht
@@ -78,30 +78,30 @@ VkSZQhR>9S6ndDaL_@fAKP1
 !s100 LKf@=KSlm=zRO3Q:iZ8@<0
 R13
 32
-Z23 !s110 1697588969
+R14
 !i10b 1
 R15
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
 !i113 1
 R18
 R19
 Apratica1_arch
 R7
 R8
-Z26 DEx4 work 20 pratica1_vhd_vec_tst 0 22 kSZQhR>9S6ndDaL_@fAKP1
-!i122 15
+Z25 DEx4 work 20 pratica1_vhd_vec_tst 0 22 kSZQhR>9S6ndDaL_@fAKP1
+!i122 17
 l45
-L34 31
-V_M>TQ:5ZOk1ES<OW5ZQ582
-!s100 lG1BVzETR?Y@d3kIl0Q3U1
+Z26 L34 31
+Z27 V_M>TQ:5ZOk1ES<OW5ZQ582
+Z28 !s100 lG1BVzETR?Y@d3kIl0Q3U1
 R13
 32
-R23
+R14
 !i10b 1
 R15
+R23
 R24
-R25
 !i113 1
 R18
 R19

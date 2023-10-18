@@ -3,7 +3,7 @@ $comment
 		vcd file pratica1.msim.vcd -direction
 $end
 $date
-	Tue Oct 17 21:29:30 2023
+	Tue Oct 17 21:38:17 2023
 $end
 $version
 	ModelSim Version 2020.1

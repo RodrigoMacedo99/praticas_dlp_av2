@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 21:29:24 2023
+    Info: Processing started: Tue Oct 17 21:38:11 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off pratica1 -c pratica1 --vector_source=E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/Waveform.vwf --testbench_file=E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim/Waveform.vwf.vht
 Info (119006): Selected device 5CEBA4F23C7 for design "pratica1"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -54,15 +54,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 21:29:27 2023
+    Info: Processing started: Tue Oct 17 21:38:14 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim/ pratica1 -c pratica1
 Info (119006): Selected device 5CEBA4F23C7 for design "pratica1"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file pratica1.vho in folder "E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Oct 17 21:29:27 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Tue Oct 17 21:38:15 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -89,7 +89,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:29:28 on Oct 17,2023
+# Start time: 21:38:16 on Oct 17,2023
 # vcom -work work pratica1.vho 
 
 # -- Loading package STANDARD
@@ -116,13 +116,13 @@ Reading pref.tcl
 
 # -- Compiling architecture structure of pratica1
 
-# End time: 21:29:28 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 21:38:16 on Oct 17,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:29:28 on Oct 17,2023
+# Start time: 21:38:16 on Oct 17,2023
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -135,12 +135,12 @@ Reading pref.tcl
 
 # -- Compiling architecture pratica1_arch of pratica1_vhd_vec_tst
 
-# End time: 21:29:29 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 21:38:16 on Oct 17,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.pratica1_vhd_vec_tst 
-# Start time: 21:29:29 on Oct 17,2023
+# Start time: 21:38:16 on Oct 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -161,7 +161,7 @@ Reading pref.tcl
 
 # after#34
 
-# End time: 21:29:30 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 21:38:17 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -174,7 +174,7 @@ Reading E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim/pratica1
 
 Processing channel transitions... 
 
-Writing the resulting VWF to E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim/pratica1_20231017212930.sim.vwf
+Writing the resulting VWF to E:/Projetos/Faculdade/praticas_dlp_av2/pratica1/simulation/qsim/pratica1_20231017213818.sim.vwf
 
 Finished VCD to VWF conversion.
 
