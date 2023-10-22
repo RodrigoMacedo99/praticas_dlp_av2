@@ -12,51 +12,49 @@ use ieee.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity motor_passo is
-    Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           s : in STD_LOGIC;
-           fase : out STD_LOGIC_VECTOR (3 downto 0)
+    Port ( clk1 : in STD_LOGIC;
+           rst1 : in STD_LOGIC;
+           s1 : in STD_LOGIC;
+           fase1 : out STD_LOGIC_VECTOR (3 downto 0)
            );
 end motor_passo;
 
 architecture Behavioral of motor_passo is
-type state_type is (A, B, C, D);
-signal current_state: state_type := A;
-
-begin
-passo_process: process(clk, rst, s)
-	begin
-		if rst='0' then current_state <= A;
-		elsif (clk'event and clk='1') then
-			case current_state is
-				when A =>
-					if s='0' then 
-						current_state <= B;
-					else current_state <= D;
-					end if;
-					fase <= "1000";
-				when B =>
-					if s='0' then 
-						current_state <= C;
-					else current_state <= A;
-					end if;
-					fase <= "0100";
-				when C =>
-					if s='0' then 
-						current_state <= D;
-					else current_state <= B;
-					end if;
-					fase <= "0010";
-				when D =>
-					if s='0' then 
-						current_state <= A;
-					else current_state <= C;
-					end if;
-					fase <= "0001";
-				end case;
-		end if;
-	end process;
-
-end Behavioral;
-
-
+	component motor is
+		PORT (	clk, rst, s: in STD_LOGIC;
+					fase: out STD_LOGIC_VECTOR(3 downto 0)
+				);
+	end component;
+	
+	component div_clock is
+		generic ( 
+		  N : integer := 19
+		);
+		port 	(
+		  mclk, rst: in std_logic;
+		  clk190 : out std_logic
+		);	
+	end component ;
+	
+	constant N : integer := 4;
+	signal clk190: std_logic;
+	
+	BEGIN
+		utt: div_clock
+			 generic map (
+				  N => N
+			 )
+			 port map (
+				  mclk => clk1,
+				  rst => rst1,
+				  clk190 => clk190
+			 );
+		utt1:	motor
+			port map (
+				clk => clk190,
+				rst => rst1,
+				s => s1,
+				fase => fase1
+			);
+			
+END Behavioral;
