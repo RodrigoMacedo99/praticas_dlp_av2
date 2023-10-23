@@ -1,12 +1,12 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off motor_passo -c motor_passo --vector_source="C:/FPGA/projects/motor_passo/Waveform2.vwf" --testbench_file="C:/FPGA/projects/motor_passo/simulation/qsim/Waveform2.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off motor_passo -c motor_passo --vector_source="C:/FPGA/projects/motor_passo/Waveform2.vwf" --testbench_file="C:/FPGA/projects/motor_passo/simulation/qsim/Waveform2.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/FPGA/projects/motor_passo/simulation/qsim/" motor_passo -c motor_passo</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/FPGA/projects/motor_passo/simulation/qsim/" motor_passo -c motor_passo</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off motor_passo -c motor_passo --vector_source="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/Waveform3.vwf" --testbench_file="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/simulation/qsim/Waveform3.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off motor_passo -c motor_passo --vector_source="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/Waveform3.vwf" --testbench_file="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/simulation/qsim/Waveform3.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/simulation/qsim/" motor_passo -c motor_passo</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="E:/Projetos/Faculdade/praticas_dlp_av2/motor_passo/simulation/qsim/" motor_passo -c motor_passo</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work motor_passo.vho
-vcom -work work Waveform2.vwf.vht
+vcom -work work Waveform3.vwf.vht
 vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.motor_passo_vhd_vec_tst
 vcd file -direction motor_passo.msim.vcd
 vcd add -internal motor_passo_vhd_vec_tst/*
@@ -20,12 +20,11 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vcom -work work motor_passo.vho
-vcom -work work Waveform2.vwf.vht
+vcom -work work Waveform3.vwf.vht
 vsim -novopt -c -t 1ps -sdfmax motor_passo_vhd_vec_tst/i1=motor_passo_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.motor_passo_vhd_vec_tst
 vcd file -direction motor_passo.msim.vcd
 vcd add -internal motor_passo_vhd_vec_tst/*
@@ -39,7 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -165,9 +163,9 @@ TRANSITION_LIST("clk1")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
 	}
 }
