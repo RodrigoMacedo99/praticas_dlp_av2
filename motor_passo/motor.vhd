@@ -30,25 +30,25 @@ passo_process: process(clk, rst, s)
 		elsif (clk'event and clk='1') then
 			case current_state is
 				when A =>
-					if s='0' then 
+					if s='1' then 
 						current_state <= B;
 					else current_state <= D;
 					end if;
 					fase <= "1000";
 				when B =>
-					if s='0' then 
+					if s='1' then 
 						current_state <= C;
 					else current_state <= A;
 					end if;
 					fase <= "0100";
 				when C =>
-					if s='0' then 
+					if s='1' then 
 						current_state <= D;
 					else current_state <= B;
 					end if;
 					fase <= "0010";
 				when D =>
-					if s='0' then 
+					if s='1' then 
 						current_state <= A;
 					else current_state <= C;
 					end if;
