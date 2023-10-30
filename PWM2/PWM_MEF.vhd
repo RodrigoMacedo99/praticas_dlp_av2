@@ -27,7 +27,7 @@ begin
  
  process (clk, rst, duty)
     begin
-        if rst = '1' then
+        if rst = '0' then
             state <= init;
         elsif rising_edge(clk) then
             state <= next_state;
