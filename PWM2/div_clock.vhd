@@ -35,11 +35,11 @@ end div_clock;
 architecture Behavioral of div_clock is
   BEGIN
 	count: PROCESS(mclk)
-		VARIABLE cont: INTEGER RANGE 0 TO 50000000;
+		VARIABLE cont: INTEGER RANGE 0 TO 2;
 	BEGIN
 		if rising_edge(mclk) then
 			cont := cont + 1;
-			IF (cont=50000000) then 
+			IF (cont=2) then 
 				clk190 <= '1';
 				cont := 0;
 			ELSE clk190 <= '0';
