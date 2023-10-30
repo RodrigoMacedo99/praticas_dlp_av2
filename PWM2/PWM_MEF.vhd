@@ -22,7 +22,7 @@ architecture Behavioral of PWM_MEF is
 type State_Type is (init,PRIMEIRO,SEGUNDO,TERCEIRO,QUARTO,QUINTO,SEXTO,SETIMO);
 signal state, next_state : State_Type;
 signal onoff: STD_LOGIC_vector(6 downto 0):="0000000";
-signal sinal2: STD_LOGIC_vector(6 downto 0);
+signal sinal2: STD_LOGIC_vector(6 downto 0):="0000000";
 begin
  
  process (clk, rst, duty)
@@ -32,7 +32,7 @@ begin
         elsif rising_edge(clk) then
             state <= next_state;
         end if;
-        if state = SETIMO then
+        if state = SETIMO and clk='0' then
             state <= next_state;
 
 		  end if;
@@ -99,29 +99,25 @@ process(state,onoff)
     end CASE;
 end process;
 
-process(duty)
+process(duty,state)
     begin
         CASE duty is
             when "001"=>
-                sinal2(0)<='1';
+                sinal2 <="0000001";
             when "010"=>
-                sinal2(1 downto 0)<="11";
+                sinal2 <="0000011";
             when "011"=>
-                sinal2(2 downto 0)<="111";
+                sinal2 <="0000111";
             when "100"=>
-                sinal2(3 downto 0)<="1111";
+                sinal2 <="0001111";
             when "101"=>
-                sinal2(4 downto 0)<="11111";
+                sinal2 <="0011111";
             when "110"=>
-                sinal2(5 downto 0)<="111111";
+                sinal2 <="0111111";
             when "111"=>
-                sinal2(6 downto 0)<="1111111";
+                sinal2 <="1111111";
             when others=>
                 sinal2<=(others=>'0');
         end case;
     end process;
-            
-        
-    
-
-end Behavioral;
+	 end Behavioral;

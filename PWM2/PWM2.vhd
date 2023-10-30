@@ -1,3 +1,24 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 30.10.2023 10:20:22
+-- Design Name: 
+-- Module Name: PWM2 - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -46,7 +67,7 @@ utt: div_clock
 me: PWM_MEF
     port map (
            clk => clk190,
-           rst => clk1,
+           rst => rst1,
            duty => entrada,
            pwm_out => saida
     );
